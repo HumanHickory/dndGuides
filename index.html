@@ -44,14 +44,27 @@ a {
 	</style>
 </head>
 <body>
-<nav class="navbar">
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
   <a class="navbar-brand" href="#">
     <img src="img/DMRenIcon.png" width="100" height="80" class="d-inline-block align-top" alt="">
   </a>
+  <form class="form-inline">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="logoutBtn">Logout</button>
+  </form>
 </nav>
 <div class="container">
 
-<div class="box mt-3">
+<div class="col-lg-5 mt-5" id="loginForm">
+	<p> Please Log In: </p>
+	<p id="errorText" class="text-danger">Invalid Username or Password</p>
+	<input type="text" id="userName" name="userName" class="form-control my-2" placeholder="Username"/>
+	<input type="password" id="password" name="password" class="form-control" placeholder="Password"/>
+	<input type="submit" class="btn mt-2 btn-info col-lg-2 offset-lg-10" id="submitBtn" value="Login"/>
+</div>
+
+<div class="box mt-3" id="myGuides">
 	<h2> My Guides</h2>			
 		<ul>
 			<li><a href="animalCarvingRoomItems.html">Animal Carving Rewards</a></li>
@@ -59,15 +72,21 @@ a {
 			<li><a href="hagHouse.html">Hag House Living Room</a></li>
 			<li><a href="thingsToRemember.html">Things to Remember</a></li>
 			<li><a href="Companions/companions.html">Companions</a></li>
+			<!-- <li><a href=""> </a></li> -->
+		</ul>	
+</div>
+
+<div class="box mt-3" id="publicGuides">
+	<h2> Ren's Guides</h2>			
+		<ul>
 			<li><a href="Attunement and Crafting.docx">Attunement, Crafting, and Enchanting </a></li>
 			<li><a href="Wererat.docx">Wererat Info </a></li>
 			<li><a href="Alignment.docx">Alignment</a></li>
-			<li><a href=""> </a></li>
 		</ul>	
 </div>
 
 
-<div class="box mt-3">
+<div class="box mt-3" id="DMsGuild">
 		<h2>DMs Guild Guides</h2>
 			<ul>	
 				<li><a href="DMsGuild/Xanathars Extraordinary Vault.pdf">Xanathars Extraordinary Vault </a></li>
@@ -88,11 +107,10 @@ a {
 				<li><a href="DMsGuide/Gnightmare on Gnome Street.pdf"> Gnightmare on Gnome Street</a></li>
 				<li><a href="DMsGuide/Gnome Tinkertoys.pdf"> Gnome Tinkertoys</a></li>
 				<li><a href="DMsGuide/Treasure of the Realms - Magic Items and Weapons of Faern.pdf">Magic Items and Weapons of Faern </a></li>
-				<li><a href=" "> </a></li>
 			</ul>
 </div>
 
-<div class="box mt-3">	
+<div class="box mt-3" id="PastAdventures">	
 	<h2 class="mt-3">Past Adventures</h2>
 		<ul>
 			<li><a href="Past Adventures/ADVENTURE PART 1.docx">Part 1: Swallow's Song and Silver Rose</a></li>
@@ -102,8 +120,7 @@ a {
 			<li><a href="Past Adventures/ADVENTURE PT 4.docx">Part 4: Feywild</a></li>
 			<li><a href="Past Adventures/Hag House.docx">Part 4.1: Hag House</a></li>
 			<li><a href="Past Adventures/ADVENTURE PT 5">Part 5: Silver Rose to Demon's Hearth</a></li>
-			<li><a href="Past Adventures/"></a></li>
-			<li><a href="Past Adventures/"></a></li>	
+			<!-- <li><a href="Past Adventures/"></a></li> -->
 		</ul>	
 </div>	
 	
@@ -119,6 +136,36 @@ AOS.init({
 	duration: 1000
 });
 
+
+	 $('#PastAdventures').hide();
+	 $('#myGuides').hide();
+	 $('#DMsGuild').hide();
+	 $('#logoutBtn').hide();
+	 $('#errorText').hide();
+	 $('#publicGuides').hide();
+
+
+
+//for those of you reading this, I literally just put the password on there so my campaign people can't see my guides and adventures. 
+$('#submitBtn').click(function(){
+	if($('#userName').val() == "DMRen" && $('#password').val() == "Genie"){
+		 $('#PastAdventures').show();
+		 $('#myGuides').show();
+		 $('#DMsGuild').show();
+		 $('#publicGuides').show();
+		 
+		 $('#logoutBtn').show();
+	} else if ($('#userName').val() == "Guest" && $('#password').val() == "RenRocks"){
+		 $('#DMsGuild').show();
+		 $('#publicGuides').show();
+		 $('#logoutBtn').show();
+	} else {
+		$('#errorText').show();
+		}
+		
+	
+
+});
 
 </script>
 </body>
