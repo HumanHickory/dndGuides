@@ -31,6 +31,8 @@ font-family: 'Lexend Deca', sans-serif;
 .box {
 	box-shadow: 5px 5px 10px rgba(0,0,0,.4);
 	padding: 2em;
+	background-color: white;
+	border-radius: 1%;
 }
 
 a {
@@ -40,6 +42,15 @@ a {
 	color: #3d0478;
 	text-decoration: none;
 	}
+	
+body {
+	background-color: var(--info);
+}
+
+.white {
+	color: white;
+	}
+	
 	
 	</style>
 </head>
@@ -56,7 +67,7 @@ a {
 </nav>
 <div class="container">
 
-<div class="col-lg-5 mt-5" id="loginForm">
+<div class="col-lg-5 mt-5 box" id="loginForm">
 	<p> Please Log In: </p>
 	<p id="errorText" class="text-danger">Invalid Username or Password</p>
 	<input type="text" id="userName" name="userName" class="form-control my-2" placeholder="Username"/>
@@ -64,24 +75,41 @@ a {
 	<input type="submit" class="btn mt-2 btn-info col-lg-2 offset-lg-10" id="submitBtn" value="Login"/>
 </div>
 
+<div class="mt-3 white display-3" id="welcome">Welcome to D&DGuides.com! </div>
+
 <div class="box mt-3" id="myGuides">
-	<h2> My Guides</h2>			
+	<h2> Private Guides</h2>			
 		<ul>
 			<li><a href="animalCarvingRoomItems.html">Animal Carving Rewards</a></li>
 			<li><a href="animalCarving.html">Animal Choices</a></li>
 			<li><a href="hagHouse.html">Hag House Living Room</a></li>
 			<li><a href="thingsToRemember.html">Things to Remember</a></li>
 			<li><a href="Companions/companions.html">Companions</a></li>
+			<li><a href="DMsGuide/Dragon The Barber of Silverymoon.pdf"> Dragon The Barber of Silverymoon</a></li>
+			<li><a href="DMsGuide/Gnightmare on Gnome Street.pdf"> Gnightmare on Gnome Street</a></li>
 			<!-- <li><a href=""> </a></li> -->
 		</ul>	
 </div>
 
 <div class="box mt-3" id="publicGuides">
-	<h2> Ren's Guides</h2>			
+	<h2> Homebrewed Guides</h2>	
+		<h5>General Guides</h5>
 		<ul>
 			<li><a href="Attunement and Crafting.docx">Attunement, Crafting, and Enchanting </a></li>
 			<li><a href="Wererat.docx">Wererat Info </a></li>
 			<li><a href="Alignment.docx">Alignment</a></li>
+			<li><a href="playerGuides/DnD New Players Quick Guide.docx">New Players Guide</a></li>
+			<li><a href="playerGuides/Leveling up.docx">Leveling Up</a></li>
+			<li><a href="playerGuides/Paladin Spells How To.docx">Casting Spells as a Paladin</a></li>
+			<li><a href="playerGuides/Spell Casting.docx">Spell Casting</a></li>
+		</ul>	
+		
+		<h5>Spell Guides</h5>
+		<ul>		
+			<li><a href="playerGuides/Druid Level 1 Spells.docx">Druid Spells, 1st Level</a></li>
+			<li><a href="playerGuides/Druid Level 2 Spells.docx">Druid Spells, 2nd Level</a></li>
+			<li><a href="playerGuides/Druid Level 3 Spells.docx">Druid Spells, 3rd Level</a></li>
+			<li><a href="playerGuides/Paladin Lv 1 Spells.docx">Paladin Spells, 1st Level</a></li>
 		</ul>	
 </div>
 
@@ -103,14 +131,12 @@ a {
 				<li><a href="DMsGuide/Artifacts Of Ancient Heroes PT 2.pdf"> Artifacts Of Ancient Heroes PT 2</a></li>
 				<li><a href="DMsGuide/Artifacts Of Ancient Heroes PT 3.pdf"> Artifacts Of Ancient Heroes PT 3</a></li>
 				<li><a href="DMsGuide/Artifacts Of Ancient Heroes PT 4.pdf"> Artifacts Of Ancient Heroes PT 4</a></li>
-				<li><a href="DMsGuide/Dragon The Barber of Silverymoon.pdf"> Dragon The Barber of Silverymoon</a></li>
-				<li><a href="DMsGuide/Gnightmare on Gnome Street.pdf"> Gnightmare on Gnome Street</a></li>
 				<li><a href="DMsGuide/Gnome Tinkertoys.pdf"> Gnome Tinkertoys</a></li>
 				<li><a href="DMsGuide/Treasure of the Realms - Magic Items and Weapons of Faern.pdf">Magic Items and Weapons of Faern </a></li>
 			</ul>
 </div>
 
-<div class="box mt-3" id="PastAdventures">	
+<div class="box my-3" id="PastAdventures">	
 	<h2 class="mt-3">Past Adventures</h2>
 		<ul>
 			<li><a href="Past Adventures/ADVENTURE PART 1.docx">Part 1: Swallow's Song and Silver Rose</a></li>
@@ -143,6 +169,17 @@ AOS.init({
 	 $('#logoutBtn').hide();
 	 $('#errorText').hide();
 	 $('#publicGuides').hide();
+	 $('#welcome').hide();
+
+
+$(document).keypress(function (e) {
+ var key = e.which;
+ if(key == 13)  // the enter key code
+  {
+    $('#submitBtn').click();
+    return false;  
+  }
+}); 
 
 
 
@@ -153,18 +190,22 @@ $('#submitBtn').click(function(){
 		 $('#myGuides').show();
 		 $('#DMsGuild').show();
 		 $('#publicGuides').show();
+		 $('#welcome').show();
+
 		 
 		 $('#logoutBtn').show();
+		 $('#loginForm').hide();
+		 
 	} else if ($('#userName').val() == "Guest" && $('#password').val() == "RenRocks"){
 		 $('#DMsGuild').show();
 		 $('#publicGuides').show();
+		 $('#welcome').show();
+		 
 		 $('#logoutBtn').show();
+		 $('#loginForm').hide();
 	} else {
 		$('#errorText').show();
-		}
-		
-	
-
+		}		
 });
 
 </script>
