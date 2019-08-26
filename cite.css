@@ -1,0 +1,163 @@
+
+.navbar {
+	box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .4);
+	}
+
+body {
+	font-family: 'Lexend Deca', sans-serif;
+	}
+
+.box {
+	box-shadow: 3px 3px 10px rgba(0,0,0,.4);
+	padding: 2em;
+	background-color: white;
+	border-radius: 1%;
+	}
+
+a {
+	color: #7F00BF;
+	}
+	
+	a:hover {
+		color: #3d0478;
+		text-decoration: none;
+	}
+	
+
+.white {
+	color: white;
+	}
+	
+.btn {
+	background-color: #7F00BF;
+	color: white;
+	}
+	
+.headerText {
+	font-size: 3em;
+	}
+	
+h1, h2, h3, h4, h5 {
+	color: #88c2bd;
+	}
+
+.jumbotron {
+	background-color: #88c2bd;
+	color: white;
+	text-align: center;
+	}
+
+/*___________________________________________________FORM STUFF________________________________________________*/
+	
+form input,
+form label {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+	
+form label {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0 5px 0;
+  top: 36px;
+  transition: all 0.3s ease-in-out; /* adding animation */
+  z-index: 1; /* placing label behind input */
+}
+form input[type="text"],
+form input[type="password"] {
+  font-size: 1.25em;
+  padding: 0 0 5px 0;
+  margin-bottom: 0.5em;
+  z-index: 10;
+  background: transparent; /* adding transparency */
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.filled label {
+  top: 0;
+  font-size: 0.8em;
+}
+	
+	
+	
+/* Wobble Top */
+@-webkit-keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+@keyframes hvr-wobble-top {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+.hvr-wobble-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+  -webkit-animation-name: hvr-wobble-top;
+  animation-name: hvr-wobble-top;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+@media only screen and (max-width: 400px) {
+	.headerText {
+		font-size: 2.5em;
+		}
+	}
