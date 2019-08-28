@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAN HEADER</title>
+
+	<!--Bootstrap and JQuery -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!--GOOGLE FONT and FONT AWESOME -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/43cf574c67.js"></script>
+	
+	<!--DAN's CSS-->
+	
+	<style>
+	
+	:root {
+    --red: green;
+    --gray: orange;
+    --navy: rgb(29, 55, 92); /*#1d375c*/
+	--background: purple;
+}
+.footerLinks {
+    position: relative;
+    margin: auto;
+    background-color: inherit !important;
+    overflow: hidden;
+    font-size: 11px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+footer hr {
+    border-color: var(--gray) !important;
+}
+
+    .footerLinks a {
+        padding-left: 1em;
+        padding-right: 1em;
+        color: var(--gray);
+		text-decoration: none;
+    }
+	
+	.footerLinks a:hover {
+		text-decoration: underline;
+		}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+	
+}
+
+.test {
+	border: 2px solid red;
+}
+
+
+footer {
+    position: relative;
+    overflow: hidden;
+	width: 80vw;
+	margin: auto;
+}
+
+footer.row, .row.foot  {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+
+a:hover.facebook {
+	color: #3b5998;
+	}
+	
+a:hover.twitter {
+	color: #38A1F3;
+	}
+	
+a:hover.youtube {
+	color: #ff0000;
+}
+
+a:hover.rss{
+	color: #EE802F;
+}
+
+.socialMedia {
+	position: relative;
+	padding: 1em;
+	
+}
+
+.socialMedia a {
+	color: var(--gray);
+	padding: .3em;
+	font-size: 2rem;
+}
+
+nav {
+	background: var(--background);
+	color: white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+}
+
+nav a {
+	color: white;
+
+	}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar {
+	padding-left: 10rem;
+	padding-right: 10rem;
+}
+
+
+
+a.nav-link{
+	font-size: 1.1rem;
+	}
+	
+.nav-item {
+	padding-left: .9rem;
+	padding-right: .9rem;
+	}
+	
+	.btn-dan {
+		background: #000000;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(#434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(#434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		color: var(--red);
+		font-weight: bold;
+		margin-left: .5rem;
+		margin-right: .5rem;
+	}
+	
+	.btn-dan:hover {
+		color: #8a0101;
+	}
+	
+	.multiple2{
+  filter: saturate(30%) drop-shadow(5px 9px 2px gray) blur(1px) hue-rotate(180deg);
+}
+
+.annoying {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;}
+
+@keyframes example {
+  10% {width: 100%;}
+  30% {width: 10%;}
+  50% {width: 100%;}
+  100% {transform: rotate(360deg); }
+  
+}
+	
+	@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+		.navbar {
+			padding-left: 6rem;
+			padding-right: 6rem;
+		}
+	}
+	
+	@media only screen and (max-width: 1025px) {
+		.navbar {
+			padding-left: 2rem;
+			padding-right: 2rem;
+	}
+	}
+	
+	</style>
+</head>
+<body>
+
+
+
+<nav class="navbar justify-content-between pt-5">
+	<div class="">
+            <a href='https://www.diversalertnetwork.org/' class="multiple2 "><img src='https://www.diversalertnetwork.org/img/danlogo.png' class="annoying"style="padding-left: 1.3rem;"></a>
+	</div>
+  <form class="form-inline">
+
+	<button class="btn btn-dan" type="button">Login</button>
+	  <button class="btn btn-dan" type="button">Join/Renew</button>
+	  <div class="input-group">
+		<input type="search" class="form-control" placeholder="Search" aria-label="Search">
+    <div class="input-group-append"> 
+      <span class="input-group-text"><i class="fas fa-search"></i></span>
+    </div>
+ 
+    </div>
+  </form>
+</nav>
+
+<nav class="navbar navbar-expand-xl">
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav "> 
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/'>Home</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/membership/'>Membership</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/medical/'>Medicine</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/research/'>Research</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/training/'>Education</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/insurance//'>Insurance</a></li>
+		<li class="nav-item"><a class="nav-link" href='https://www.diversalertnetwork.org/dive-store/'>Store</a></li>	  
+    </ul>
+
+  </div>
+</nav>
+
+    <div class="container body-content my-5">
+
+    </div>
+    <div class="container-fluid foot">
+		<footer class="">
+
+			<hr>
+			<div class='footerLinks'>&copy; DAN, Inc.&nbsp; &nbsp; &nbsp; &nbsp; All rights reserved.
+				<a href='https://www.diversalertnetwork.org/sitemap'>Site Map</a>
+				<a href='http://www.alertdiver.com/?a=advertise'>Advertise</a>
+				<a href='https://www.diversalertnetwork.org/privacypolicy'>Privacy Policy</a>
+				<a href='https://www.diversalertnetwork.org/?a=logorequest'>Logo Policy</a>
+				<a href='https://www.diversalertnetwork.org/page/social-media-policy'>Social Media Policy</a>
+				<a href='https://www.diversalertnetwork.org/copyright.asp'>Terms & Conditions</a>
+				<a href='https://www.diversalertnetwork.org/contact/'>Contact Us</a>
+			</div>
+			
+					    <div class='socialMedia'>			  
+			  <a href="http://www.facebook.com/pages/Divers-Alert-Network/27919332696" class="facebook"><i class="fab fa-facebook-square"></i></a>
+			  <a href="http://twitter.com/#!/DAN_America" class="twitter"><i class="fab fa-twitter-square"></i></a>
+			  <a href="http://www.youtube.com/user/DiversAlertNetworkTV" class="youtube"><i class="fab fa-youtube-square"></i></a>
+			  <a href="https://www.diversalertnetwork.org/rss/index.asp" class="rss"><i class="fas fa-rss-square rss"></i></a>		  
+            </div>
+		</footer>
+    </div>
+
+    <script src="https://www.diversalertnetwork.org/include/js/gsticky.js" type="text/javascript"></script>
+    <script src="https://www.diversalertnetwork.org/include/js/mmenu.js" type="text/javascript"></script>
+
+
+
+</body>
+</html>
